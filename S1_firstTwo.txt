@@ -1,0 +1,7 @@
+//String-1 > firstTwo 
+public String firstTwo(String str) {
+  if(str.length() > 1) {
+    str =  str.substring(0, 2);
+  }
+  return str;
+}

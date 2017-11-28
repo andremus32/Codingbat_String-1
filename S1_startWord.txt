@@ -1,0 +1,28 @@
+//String-1 > startWord
+public String startWord(String str, String word) {
+  int wordLength = word.length();
+  int strLength = str.length();
+  if (wordLength <= strLength && strLength != 0){
+    String nStr = str.substring(1, wordLength);
+    String nWord = word.substring(1);
+    if (nStr.equals(nWord)){
+      return str.substring(0, wordLength);
+    }
+    else return "";
+  }
+  else if(wordLength > strLength && strLength != 0){
+    if (strLength > 1){
+      String nStr = str.substring(1);
+      String nWord = word.substring(1, strLength);
+      if (nStr.equals(nWord)){
+        return str;
+      }
+    else return "";
+    }
+    else if(str.equals(word.substring(1, 2))){
+      return str;
+    }
+    else return "";
+  }
+  else return "";
+}

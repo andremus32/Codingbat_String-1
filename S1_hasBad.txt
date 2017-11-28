@@ -1,0 +1,15 @@
+//String-1 > hasBad
+public boolean hasBad(String str) {
+  boolean check = false;
+  if(str.length() == 3){
+    if(str.substring(0, 3).equals("bad")){
+      check = true;
+    }
+  }
+  else if(str.length() > 3){
+    if(str.substring(0, 3).equals("bad") || str.substring(1,4).equals("bad")){
+      check = true;
+    }
+  }
+  return check;
+}

@@ -1,0 +1,22 @@
+//String-1 > deFront 
+public String deFront(String str) {    
+  if(str.length() > 1){
+    if(str.substring(0,2).equals("ab") || str.substring(0,2).equals("Ab")){
+      return str;
+    }
+    else if(str.charAt(0) == 'a' || str.charAt(0) == 'A'){
+      return "a" + str.substring(2);
+    }
+    else if (str.charAt(1) == 'b' || str.charAt(1) == 'B'){
+      return str.substring(1);
+    }
+    else return str.substring(2);
+  }
+  else if (str.length() == 1){
+    if(str.equals("a") || str.equals("A")){
+      return str;
+    }
+    else return "";
+  }
+  else return "";
+}
